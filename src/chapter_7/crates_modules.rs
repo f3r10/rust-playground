@@ -6,7 +6,7 @@ use crate::crates_modules::front_of_house::hosting;
 pub fn eat_at_restaurant() {
     // crate::front_of_house::hosting::add_to_waitlist();
     front_of_house::hosting::add_to_waitlist();
-    hosting::add_to_waitlist();// because the use (import part)
+    hosting::add_to_waitlist(); // because the use (import part)
     let mut meal = back_of_house::Breakfast::summer("Rye");
     meal.toast = String::from("Wheat");
     println!("from complex chapter_7 {:#?}", meal);

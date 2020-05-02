@@ -5,10 +5,8 @@ use std::io::Read;
 pub fn error_handling() {
     let f = File::open("hello.txt");
     match f {
-        Ok(file) =>
-            println!("success result"),
-        Err(error) =>
-            println!("problem opening the file: {:?}", error),
+        Ok(file) => println!("success result"),
+        Err(error) => println!("problem opening the file: {:?}", error),
     };
     let name = read_name_from_file("hello.txt");
     match name {

@@ -21,6 +21,4 @@ pub fn hashMapExamples() {
 
     let score_1 = scores_teams.get(&String::from("blue"));
     println!("score_1: {:?}", score_1);
-    
-
 }

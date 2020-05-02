@@ -4,11 +4,10 @@ pub fn lifetimes() {
     {
         // let string2 = String::from("xyz");
         let string2 = "xyz"; // it has the static lifetime reference so lives for ever
-        result  = longest(string1.as_str(), string2);
+        result = longest(string1.as_str(), string2);
     }
 
     println!("longest: {:?}", result);
-
 }
 
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {

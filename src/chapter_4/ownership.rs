@@ -18,24 +18,23 @@ fn first_world_wrong(s: &String) -> usize {
     s.len()
 }
 
-
 fn first_world(word: &str) -> &str {
     let bytes = word.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
-fn first_word(s: &String) -> usize {
-    let bytes = s.as_bytes();
+        fn first_word(s: &String) -> usize {
+            let bytes = s.as_bytes();
 
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return i;
+            for (i, &item) in bytes.iter().enumerate() {
+                if item == b' ' {
+                    return i;
+                }
+            }
+
+            s.len()
         }
-    }
-
-    s.len()
-}
 
         if item == b' ' {
-            return &word[0..i]
+            return &word[0..i];
         }
     }
     &word[..]

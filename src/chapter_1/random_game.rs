@@ -1,6 +1,6 @@
-use std::io;
-use std::cmp::Ordering;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
 
 pub fn loop_game() {
     loop {
@@ -11,12 +11,12 @@ pub fn loop_game() {
         // let guess: i32 = guess.trim().parse().expect("Should be a number");
         let guess: i32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_)  => continue,
+            Err(_) => continue,
         };
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You win!")
+            Ordering::Equal => println!("You win!"),
         }
     }
 }
@@ -27,6 +27,7 @@ fn generate_rand_number(min: i32, max: i32) -> i32 {
 
 fn get_input_user(placeholder: &mut String) {
     println!("Please type a nmber!");
-    io::stdin().read_line(placeholder)
+    io::stdin()
+        .read_line(placeholder)
         .expect("Failed to read line");
 }
